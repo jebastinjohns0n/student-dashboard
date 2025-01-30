@@ -33,7 +33,7 @@ input:focus {
 
 button {
     padding: 10px 15px;
-    background-color: #28a745;
+    background-color: #2896a7;
     color: white;
     border: none;
     border-radius: 4px;
@@ -42,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #214588;
     transform: scale(1.05);
 }
 
