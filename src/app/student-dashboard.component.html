@@ -1,0 +1,30 @@
+<!-- src/app/student-dashboard.component.html -->
+
+<div>
+  <!-- The main heading for the student dashboard -->
+  <h2>Student Dashboard</h2>
+
+  <!-- The form for adding a new student -->
+  <form (ngSubmit)="addStudent()">
+    <!-- Input field for the student's name, bound to newStudent.name -->
+    <input type="text" [(ngModel)]="newStudent.name" name="name" placeholder="Name" required />
+
+    <!-- Input field for the student's age, bound to newStudent.age -->
+    <input type="number" [(ngModel)]="newStudent.age" name="age" placeholder="Age" required />
+
+    <!-- Button to submit the form and add the student -->
+    <button type="submit">Add Student</button>
+  </form>
+
+  <!-- Unordered list to display the list of students -->
+  <ul>
+    <!-- Loop through the students array and display each student's name and age -->
+    <li *ngFor="let student of students">
+      {{ student.name }} ({{ student.age }})
+      <!-- Button to edit the selected student -->
+      <button (click)="editStudent(student)">Edit</button>
+      <!-- Button to delete the selected student -->
+      <button (click)="deleteStudent(student)">Delete</button>
+    </li>
+  </ul>
+</div>
